@@ -19,6 +19,9 @@ A comprehensive, hands-on Java learning repository with **clear documentation**,
 11. [Java Internals (JVM, JDK, JRE)](#8%EF%B8%8F⃣-java-internals)
 12. [Memory Management & GC](#9%EF%B8%8F⃣-memory-management--garbage-collection)
 13. [Interview Cheatsheet](#-interview-cheatsheet)
+14. [Practice Projects](#-practice-projects)
+
+> 🚀 **Ready to build?** Check out [PROJECTS.md](./PROJECTS.md) for 5 real-world applications!
 
 ---
 
@@ -699,6 +702,31 @@ list.stream()
 3. Inner class holding outer class reference
 4. ThreadLocal not removed
 5. Listeners not unregistered
+
+---
+
+---
+
+# 🚀 Practice Projects
+
+After mastering the concepts, build real-world applications! See **[PROJECTS.md](./PROJECTS.md)** for 5 comprehensive project plans:
+
+| # | Project | Core Concepts | Difficulty |
+|---|---------|---------------|------------|
+| 1 | **Library Management** | HashMap, TreeSet, Queue, Exception Handling | ⭐⭐ |
+| 2 | **E-Commerce Order System** | PriorityQueue, ConcurrentHashMap, Streams, BigDecimal | ⭐⭐⭐ |
+| 3 | **Banking Transaction System** | ReentrantLock, ConcurrentHashMap, Thread Safety | ⭐⭐⭐⭐ |
+| 4 | **Task Scheduler** | PriorityQueue, TreeMap, ScheduledExecutor | ⭐⭐⭐ |
+| 5 | **Real-Time Chat** | BlockingQueue, LRU Cache, CompletableFuture | ⭐⭐⭐⭐ |
+
+Each project includes:
+- ✅ Complete system architecture
+- ✅ Data models with all fields
+- ✅ Core feature implementations
+- ✅ Edge cases & solutions
+- ✅ Constraints & validation rules
+- ✅ Test scenarios
+- ✅ Project structure
 
 ---
 

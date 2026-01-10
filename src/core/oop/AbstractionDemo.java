@@ -17,6 +17,25 @@ package core.oop;
  * - Abstract methods have no body, must be overridden
  * - Interfaces create contracts for implementing classes
  * - Default methods provide backward compatibility
+ *
+ * ┌───────────────────────────────────────────────────────────────────┐
+ * │           ABSTRACT CLASS vs INTERFACE                            │
+ * ├─────────────────────────────┬─────────────────────────────────────┤
+ * │       ABSTRACT CLASS        │           INTERFACE                 │
+ * ├─────────────────────────────┼─────────────────────────────────────┤
+ * │ Can have constructors       │ Cannot have constructors            │
+ * │ Can have instance variables │ Only constants (public static final)│
+ * │ Can have any access modifier│ Methods public by default           │
+ * │ Single inheritance          │ Multiple inheritance                │
+ * │ Can have concrete methods   │ All methods abstract (pre-Java 8)   │
+ * │ extends keyword             │ implements keyword                  │
+ * │ IS-A relationship           │ CAN-DO relationship                 │
+ * │ Partial abstraction         │ Full abstraction (pre-Java 8)       │
+ * └─────────────────────────────┴─────────────────────────────────────┘
+ *
+ * WHEN TO USE:
+ * - Abstract class: Share code among closely related classes
+ * - Interface: Define contract for unrelated classes, enable multiple inheritance
  */
 public class AbstractionDemo {
 
@@ -114,8 +133,6 @@ public class AbstractionDemo {
 
         System.out.println("\n===== ABSTRACT CLASS VS INTERFACE =====");
 
-        printComparison();
-
         // ===== MARKER INTERFACES =====
 
         System.out.println("\n===== MARKER INTERFACES =====");
@@ -151,29 +168,6 @@ public class AbstractionDemo {
         dd.commonMethod();  // Must override if conflict exists
 
         System.out.println("\n===== Demo Complete =====");
-    }
-
-    static void printComparison() {
-        String comparison =
-            "┌───────────────────────────────────────────────────────────────────┐\n" +
-            "│           ABSTRACT CLASS vs INTERFACE                            │\n" +
-            "├─────────────────────────────┬─────────────────────────────────────┤\n" +
-            "│       ABSTRACT CLASS        │           INTERFACE                 │\n" +
-            "├─────────────────────────────┼─────────────────────────────────────┤\n" +
-            "│ Can have constructors       │ Cannot have constructors           │\n" +
-            "│ Can have instance variables │ Only constants (public static final)│\n" +
-            "│ Can have any access modifier│ Methods public by default          │\n" +
-            "│ Single inheritance          │ Multiple inheritance               │\n" +
-            "│ Can have concrete methods   │ All methods abstract (pre-Java 8)  │\n" +
-            "│ extends keyword             │ implements keyword                  │\n" +
-            "│ IS-A relationship           │ CAN-DO relationship                │\n" +
-            "│ Partial abstraction         │ Full abstraction (pre-Java 8)     │\n" +
-            "├─────────────────────────────┴─────────────────────────────────────┤\n" +
-            "│ WHEN TO USE:                                                      │\n" +
-            "│ Abstract class: Share code among related classes                 │\n" +
-            "│ Interface: Define contract for unrelated classes                 │\n" +
-            "└───────────────────────────────────────────────────────────────────┘";
-        System.out.println(comparison);
     }
 }
 

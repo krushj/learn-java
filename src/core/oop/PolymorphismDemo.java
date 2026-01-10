@@ -17,6 +17,21 @@ package core.oop;
  *
  * POLYMORPHISM = "Many Forms"
  * Same interface/method, different implementations
+ *
+ * ┌─────────────────────────────────────────────────────────────┐
+ * │        OVERLOADING vs OVERRIDING                           │
+ * ├─────────────────────────┬───────────────────────────────────┤
+ * │      OVERLOADING        │         OVERRIDING                │
+ * ├─────────────────────────┼───────────────────────────────────┤
+ * │ Same class              │ Parent-child classes              │
+ * │ Same name               │ Same name                         │
+ * │ Different parameters    │ Same parameters                   │
+ * │ Return type can differ  │ Same/covariant return             │
+ * │ Access can differ       │ Cannot be more restrictive        │
+ * │ Compile-time binding    │ Runtime binding                   │
+ * │ Static polymorphism     │ Dynamic polymorphism              │
+ * │ Also: ad-hoc poly.      │ Also: subtype poly.               │
+ * └─────────────────────────┴───────────────────────────────────┘
  */
 public class PolymorphismDemo {
 
@@ -186,27 +201,7 @@ public class PolymorphismDemo {
         // ===== OVERLOADING VS OVERRIDING COMPARISON =====
 
         System.out.println("\n===== OVERLOADING VS OVERRIDING =====");
-
-        /*
-         * OVERLOADING:
-         * - Same class (or inherited)
-         * - Same method name
-         * - Different parameters
-         * - Return type can differ
-         * - Compile-time binding
-         * - Also called static polymorphism
-         *
-         * OVERRIDING:
-         * - Parent-child relationship
-         * - Same method signature
-         * - Same or covariant return type
-         * - Cannot be more restrictive access
-         * - Runtime binding
-         * - Also called dynamic polymorphism
-         */
-
-        ComparisonDemo demo = new ComparisonDemo();
-        demo.showDifferences();
+        System.out.println("See class Javadoc for comparison table");
 
         System.out.println("\n===== Demo Complete =====");
     }
@@ -400,26 +395,3 @@ class ChildStatic extends ParentStatic {
     }
 }
 
-// ===== COMPARISON DEMO =====
-
-class ComparisonDemo {
-
-    public void showDifferences() {
-        String comparison =
-            "┌─────────────────────────────────────────────────────────────┐\n" +
-            "│        OVERLOADING vs OVERRIDING                           │\n" +
-            "├─────────────────────────┬───────────────────────────────────┤\n" +
-            "│      OVERLOADING        │         OVERRIDING               │\n" +
-            "├─────────────────────────┼───────────────────────────────────┤\n" +
-            "│ Same class              │ Parent-child classes              │\n" +
-            "│ Same name               │ Same name                         │\n" +
-            "│ Different parameters    │ Same parameters                   │\n" +
-            "│ Return type can differ  │ Same/covariant return             │\n" +
-            "│ Access can differ       │ Cannot be more restrictive        │\n" +
-            "│ Compile-time binding    │ Runtime binding                   │\n" +
-            "│ Static polymorphism     │ Dynamic polymorphism              │\n" +
-            "│ Also: ad-hoc poly.      │ Also: subtype poly.              │\n" +
-            "└─────────────────────────┴───────────────────────────────────┘";
-        System.out.println(comparison);
-    }
-}
